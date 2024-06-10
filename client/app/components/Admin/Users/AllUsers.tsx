@@ -17,7 +17,7 @@ const AllUsers: FC<Props> = ({ isTeam }) => {
   const { theme, setTheme } = useTheme();
   const [active, setActive] = useState(false)
 
-  const { isLoading, data, error } = useGetAllUsersQuery({});
+  const { isLoading, data, error } = useGetAllUsersQuery({}) as any;
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.3 },

@@ -24,10 +24,10 @@ const ChangePassword:FC<Props> = (props) => {
             toast.success("Password changed successfully")
         }
         if(error) {
-            if("data" in error){
-                const errorData = error as any;
-                toast.error(errorData.data.message)
-            }
+            if (typeof error === 'object' && 'data' in error) {
+            const errorData = error as { data: { message: string } };
+            toast.error(errorData.data.message);
+        }
         }
     }, [isSuccess,error])
 

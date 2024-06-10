@@ -5,7 +5,7 @@ import Coursecard from "../Courses/Coursecard";
 type Props = {};
 
 const Courses = (props: Props) => {
-  const { data, isLoading } = useGetUsersAllCoursesQuery({});
+  const { data, isLoading } = useGetUsersAllCoursesQuery({}) as any;
   const [courses, setCourses] = useState<any[]>([]);
 
   useEffect(() => {

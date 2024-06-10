@@ -15,7 +15,7 @@ const CourseDetailsPage = ({id}: Props) => {
     console.log(id)
     const [route,setRoute] = useState("Login")
     const [open,setOpen] = useState(false)
-    const {data,isLoading} =  useGetCoursesDetailsQuery(id)
+    const {data,isLoading} =  useGetCoursesDetailsQuery(id) as any
  
   return (
     <>
