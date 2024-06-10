@@ -229,7 +229,7 @@ const CourseContent: FC<Props> = ({ courseContentData, setCourseContentData, act
                     </div>
                     {console.log(item?.links)}
                     {item?.links.map((link: any, linkIndex: number) => (
-                      <div className="mb-3 block">
+                      <div className="mb-3 block" key={linkIndex}>
                         <div className="w-full flex items-center justify-between">
                           <label className={styles.label}>Link {linkIndex + 1}</label>
                           <AiOutlineDelete className={`${linkIndex === 0 ? "cursor-no-drop" : "cursor-pointer"} text-black dark:text-white text-[20px] `} onClick={() => (linkIndex === 0 ? null : handleRemoveLink(index, linkIndex))} />

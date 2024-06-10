@@ -75,7 +75,7 @@ const EditCategories = (props: Props) => {
             {categories &&
             categories.map((item:any,index:number)=>{
                 return(
-                    <div className='p-3' >
+                    <div className='p-3' key={index}>
                         <div className='flex items-center w-full justify-center' >
                             <input
                             className={`${styles.input} !w-[unset] !border-none !text-[20px] `}

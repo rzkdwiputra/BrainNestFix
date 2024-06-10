@@ -9,25 +9,34 @@ import Footer from "../components/Footer";
 
 type Props = {};
 
-const page: FC<Props> = (props: Props) => {
+const Page: FC<Props> = (props: Props) => {
   const [open, setOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(5);
   const [route, setRoute] = useState("Login");
-  const {user} = useSelector ((state:any)=> state.auth)
+  const { user } = useSelector((state: any) => state.auth);
 
   return (
-    <div  >
+    <div>
       <Protected>
-        <Heading title={`${user?.name} profile`}  description="BrainNest is a platform for everyone who wants to learn the world of programming" keywords="Programing,MERN,Redux,Mechine Learning, AI, Deep Learning, Data Analyst, Database" />
-        <Header open={open} setOpen={setOpen} activeItem={activeItem} setRoute={setRoute} route={route} />
+        <Heading
+          title={`${user?.name} profile`}
+          description="BrainNest is a platform for everyone who wants to learn the world of programming"
+          keywords="Programming, MERN, Redux, Machine Learning, AI, Deep Learning, Data Analyst, Database"
+        />
+        <Header
+          open={open}
+          setOpen={setOpen}
+          activeItem={activeItem}
+          setRoute={setRoute}
+          route={route}
+        />
         <Profile user={user} />
       </Protected>
       <div className="mt-[55px]">
-      <Footer/>
+        <Footer />
       </div>
-      
     </div>
   );
 };
 
-export default page;
+export default Page;
