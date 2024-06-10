@@ -1,0 +1,78 @@
+[33mcommit b1e5a57fc72bcf1373901a5b45de75dcfba30b02[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: rzkdwiputra <rizkydwiputra6666@gmail.com>
+Date:   Sat May 25 13:23:10 2024 +0700
+
+    Remove secret from client/.env
+
+[33mcommit 7b26a29678147b5163ef846911f43a7414adc8aa[m
+Author: rzkdwiputra <rizkydwiputra6666@gmail.com>
+Date:   Sat May 25 13:21:49 2024 +0700
+
+    Remove secret from client/.env
+
+[33mcommit a35359f1ad7bf916e1de8009d53e5dad0f99e667[m
+Merge: 972f607 ee58b4d
+Author: rzkdwiputra <rizkydwiputra6666@gmail.com>
+Date:   Sat May 25 12:28:26 2024 +0700
+
+    Merge branch 'main' of https://github.com/rzkdwiputra/BrainNest
+
+[33mcommit 972f60740b4423b8fb768d81ad582335108f92b7[m
+Author: rzkdwiputra <rizkydwiputra6666@gmail.com>
+Date:   Sat May 25 12:06:41 2024 +0700
+
+    Your commit message here
+
+[33mcommit ee58b4d78cf66f9ae127839cb97254adb62ad611[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Sumitra Adriansyah <95554385+Sumitraadrian@users.noreply.github.com>
+Date:   Mon May 13 01:02:40 2024 +0700
+
+    Create README.md
+
+[33mcommit 18c243a93ae0c72f7442e4467915ae1e469d909b[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Fri Apr 5 18:00:20 2024 +0700
+
+    Create question, add reply in question, add review in course
+
+[33mcommit cbd96cca3e9696911a51efa3a8fd7a5cc05f42f0[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Thu Apr 4 11:38:43 2024 +0700
+
+    Added Get single and all courses, Get course content, Get all courses for valid-user
+
+[33mcommit 67b4de96a1b5bf8a79832155067e28f8f74fdefa[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Wed Apr 3 12:39:01 2024 +0700
+
+    add Course Model, Create course, Edit course
+
+[33mcommit a0268cddc5450d6288dc952cfae9c2b42e528f4b[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Mon Apr 1 11:31:42 2024 +0700
+
+    renamed variable
+
+[33mcommit 393ce94e7692f7c3adf09ab9a53f757cacd4354e[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Mon Apr 1 11:29:54 2024 +0700
+
+    Update user info, password, avatar
+
+[33mcommit 014a405d5e1bdefd4eb9aaf2becbca5132095f8f[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Mon Apr 1 10:30:47 2024 +0700
+
+    Generating new Access token, user social authentication, get user info
+
+[33mcommit 3076b722c4d31ce8f07075c4920803f90e3519f6[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Mon Apr 1 10:30:32 2024 +0700
+
+    Generating new Access token, user social authentication, get user info
+
+[33mcommit a93302e5385bb730bfb96e971e7f076e37fe926f[m
+Author: Rizqi <rizqiilhamsiregar@gmail.com>
+Date:   Sun Mar 31 18:57:12 2024 +0700
+
+    User authentication & authorization
