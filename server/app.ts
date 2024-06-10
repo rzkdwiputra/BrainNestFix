@@ -17,8 +17,13 @@ app.use(express.json({ limit: "50mb" }));
 //cookie parser
 app.use(cookieParser());
 
-//cors
-app.use(cors());
+//cor => cross origin resource sharing
+app.use(
+  cors({
+    origin: ["*"],
+    credentials: true,
+  })
+);
 
 //routes
 app.use("/api/v1", userRouter, orderRouter, courseRouter, notificationRoute, analyticsRouter, layoutRouter);
