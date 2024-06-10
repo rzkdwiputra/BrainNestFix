@@ -64,18 +64,18 @@ const AllCourses = (props: Props) => {
 
   const rows:any = [];
 
-  {
-    data &&
-      data.courses.forEach((item: any) => {
-        rows.push({
-          id: item._id,
-          title: item.name,
-          ratings: item.ratings,
-          purchased: item.purchased,
-          created_at: format(item.createdAt),
-        });
-      });
-  }
+  // {
+  //   data &&
+  //     data.courses.forEach((item: any) => {
+  //       rows.push({
+  //         id: item._id,
+  //         title: item.name,
+  //         ratings: item.ratings,
+  //         purchased: item.purchased,
+  //         created_at: format(item.createdAt),
+  //       });
+  //     });
+  // }
 
   useEffect(() => {
     if(isSuccess){
