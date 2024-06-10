@@ -1,7 +1,7 @@
 "use client";
 import { useGetAllCoursesQuery } from "@/redux/features/courses/coursesApi";
 import { useGetHeroDataQuery } from "@/redux/features/layout/layoutApi";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Loader from "../components/Loader/Loader";
 import Header from "../components/Header";
@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 type Props = {};
 
 const Page = (props: Props) => {
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const { data, isLoading } = useGetAllCoursesQuery(undefined, {}) as any;
   const { data: categoriesData } = useGetHeroDataQuery("Categories", {});
   const [route, setRoute] = useState("Login");
