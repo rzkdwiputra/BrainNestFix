@@ -12,6 +12,18 @@ import sendMail from "../utils/sendMail";
 import NotificationModel from "../models/notification.Model";
 import axios from "axios";
 
+interface Course {
+  _id: string;
+  name: string;
+  ratings: number;
+  purchased: number;
+  createdAt: string;
+}
+
+interface Data {
+  courses: Course[];
+}
+
 // upload course
 export const uploadCourse = CatchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -118,7 +130,6 @@ export const getAllCourses = CatchAsyncError(async (req: Request, res: Response,
     const courseId = req.params.id;
 
     const isCacheExist = await redis.get(courseId);
-    
 
     const courses = await CourseModel.find().select("-courseData.videoUrl -courseData.suggestion -courseData.questions -courseData.links");
 

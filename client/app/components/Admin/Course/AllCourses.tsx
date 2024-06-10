@@ -19,7 +19,7 @@ const AllCourses = (props: Props) => {
   const [courseId,setCourseId] = useState("")
   const [deleteCourse,{isSuccess,error}] = useDeleteCourseMutation({})
 
-  const { isLoading, data, refetch } = useGetAllCoursesQuery({},{refetchOnMountOrArgChange:true});
+  const { data, isLoading, refetch } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true }) as { data: { courses: any[] }; isLoading: boolean; refetch: () => void };
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
@@ -64,18 +64,18 @@ const AllCourses = (props: Props) => {
 
   const rows:any = [];
 
-  // {
-  //   data &&
-  //     data.courses.forEach((item: any) => {
-  //       rows.push({
-  //         id: item._id,
-  //         title: item.name,
-  //         ratings: item.ratings,
-  //         purchased: item.purchased,
-  //         created_at: format(item.createdAt),
-  //       });
-  //     });
-  // }
+  {
+    data &&
+      data?.courses.forEach((item: any) => {
+        rows.push({
+          id: item._id,
+          title: item.name,
+          ratings: item.ratings,
+          purchased: item.purchased,
+          created_at: format(item.createdAt),
+        });
+      });
+  }
 
   useEffect(() => {
     if(isSuccess){
@@ -84,9 +84,9 @@ const AllCourses = (props: Props) => {
       toast.success ("Course Deleted Successfully")
     }
     if(error){
-      if("data" in error){
-        const errorMessage = error as any;
-        toast.error(errorMessage.data.message)
+      if (typeof error === 'object' && 'data' in error) {
+        const errorMessage = error as { data: { message: string } };
+        toast.error(errorMessage.data.message);
       }
     }
   }, [isSuccess,error])

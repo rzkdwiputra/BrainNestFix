@@ -14,23 +14,23 @@ type Props = {
 };
 
 const EditCourse: FC<Props> = ({ id }) => {
-  const [editCourse,{isSuccess,error}]=useEditCourseMutation();
-  const {  data, refetch } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true });
+  const [editCourse, { isSuccess, error }] = useEditCourseMutation();
+  const { data, refetch } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true }) as any;
 
   const editCourseData = data && data.courses.find((i: any) => i._id === id);
 
-    useEffect(() => {
-      if (isSuccess) {
-        toast.success("Course update successfully");
-        redirect("/admin/courses");
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("Course update successfully");
+      redirect("/admin/courses");
+    }
+    if (error) {
+      if ("data" in { error }) {
+        const errorMessage = error as any;
+        toast.error(errorMessage.data.message);
       }
-      if (error) {
-        if ("data" in {error}) {
-          const errorMessage = error as any;
-          toast.error(errorMessage.data.message);
-        }
-      }
-    }, [isSuccess,error]);
+    }
+  }, [isSuccess, error]);
 
   const [active, setActive] = useState(0);
 
@@ -122,7 +122,7 @@ const EditCourse: FC<Props> = ({ id }) => {
 
   const handleCourseCreate = async (e: any) => {
     const data = courseData;
-    await editCourse({id:editCourseData?._id,data})
+    await editCourse({ id: editCourseData?._id, data });
     console.log(data);
   };
 
