@@ -20,7 +20,7 @@ app.use(cookieParser());
 //cor => cross origin resource sharing
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://brainnest.vercel.app"],
     credentials: true,
   })
 );
